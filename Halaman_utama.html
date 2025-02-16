@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel & Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .panel {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="panel">
+        <h2>Panel Utama</h2>
+        <p>Klik tombol di bawah untuk menuju ke WhatsApp.</p>
+        <button class="btn" onclick="goToWhatsApp(1)">1 GB</button>
+        <button class="btn" onclick="goToWhatsApp(2)">2 GB</button>
+        <button class="btn" onclick="goToWhatsApp(3)">3 GB</button>
+        <button class="btn" onclick="goToWhatsApp(4)">4 GB</button>
+        <button class="btn" onclick="goToWhatsApp(5)">5 GB</button>
+        <button class="btn" onclick="goToWhatsApp(6)">6 GB</button>
+        <button class="btn" onclick="goToWhatsApp(7)">7 GB</button>
+        <button class="btn" onclick="goToWhatsApp(8)">8 GB</button>
+        <button class="btn" onclick="goToWhatsApp(9)">9 GB</button>
+        <button class="btn" onclick="goToWhatsApp(10)">10 GB</button>
+        <button class="btn" onclick="goToWhatsApp('UNLI')">UNLI</button>
+    </div>
+
+    <script>
+        function goToWhatsApp(size) {
+            const phoneNumber = "6289672380803"; // Ganti dengan nomor WhatsApp tujuan
+            const message = encodeURIComponent(`Halo, saya ingin membeli paket ${size} GB.`);
+            const waLink = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(waLink, "_blank");
+        }
+    </script>
+
+</body>
+</html>
